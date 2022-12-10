@@ -11,10 +11,13 @@ namespace DataAccess.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Web;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=MELIH\SQLEXPRESS;Database=WebMidtermProject;Trusted_Connection=true");
 
         }
+
         public DbSet<User> Users { get; set; }
         public DbSet<AttackDetails> AttackDetails { get; set; }
+        public DbSet<OperationClaim> OperationClaims { get; set; }
+        public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
     }
 }

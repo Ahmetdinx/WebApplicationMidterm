@@ -10,5 +10,8 @@ namespace Business.Abstract
     {
         IDataResult<AttackDetails> GetById(int id);
         IDataResult<List<AttackDetails>> GetAll();
+        IResult Add(AttackDetails attackDetails);
+        IResult Update(AttackDetails attackDetails);
+        IResult Delete(AttackDetails attackDetails);
     }
 }

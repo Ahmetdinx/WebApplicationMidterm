@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public  class AttackDetails : IEntity
     {
-        public int AttackId { get; set; }
+        public int Id { get; set; }
         public string AttackDescription { get; set; }
         public DateTime Date { get; set; }
         public int UserId { get; set; }

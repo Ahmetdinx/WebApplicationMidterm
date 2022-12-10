@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MitreAttacks", "MitreAttacks\MitreAttacks.csproj", "{EFF221A0-2FBF-4CF8-BE0F-430FDB675DF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{6B8B9FF8-14DB-41ED-B32A-9BA829AFB85E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{6B8B9FF8-14DB-41ED-B32A-9BA829AFB85E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{7B6CEC0B-581C-429B-B16C-5B18CDDB1BC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{7B6CEC0B-581C-429B-B16C-5B18CDDB1BC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{C7E5BA3B-A27D-4F6F-BE7B-B0B3C552B85B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{C7E5BA3B-A27D-4F6F-BE7B-B0B3C552B85B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{39D23501-70E4-48A1-BE64-9BBF665CC7C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{39D23501-70E4-48A1-BE64-9BBF665CC7C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{E84E7E9F-E078-41A3-A844-4AFB69D242DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EFF221A0-2FBF-4CF8-BE0F-430FDB675DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFF221A0-2FBF-4CF8-BE0F-430FDB675DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFF221A0-2FBF-4CF8-BE0F-430FDB675DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EFF221A0-2FBF-4CF8-BE0F-430FDB675DF2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6B8B9FF8-14DB-41ED-B32A-9BA829AFB85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6B8B9FF8-14DB-41ED-B32A-9BA829AFB85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B8B9FF8-14DB-41ED-B32A-9BA829AFB85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{39D23501-70E4-48A1-BE64-9BBF665CC7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39D23501-70E4-48A1-BE64-9BBF665CC7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39D23501-70E4-48A1-BE64-9BBF665CC7C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E84E7E9F-E078-41A3-A844-4AFB69D242DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E84E7E9F-E078-41A3-A844-4AFB69D242DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E84E7E9F-E078-41A3-A844-4AFB69D242DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E84E7E9F-E078-41A3-A844-4AFB69D242DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

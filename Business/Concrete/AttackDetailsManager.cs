@@ -10,13 +10,23 @@ namespace Business.Concrete
 {
     public class AttackDetailsManager : IAttackDetailsService
     {
-        IAttackDetailsService _attackDetailsService;
-        IAttackDetailsDal _attackDetailsDal;
+        private readonly IAttackDetailsDal _attackDetailsDal;
 
-        public AttackDetailsManager(IAttackDetailsService attackDetailsService , IAttackDetailsDal attackDetailsDal)
+        public AttackDetailsManager(IAttackDetailsDal attackDetailsDal)
         {
-            _attackDetailsService = attackDetailsService;
             _attackDetailsDal = attackDetailsDal;
+        }
+
+        public IResult Add(AttackDetails attackDetails)
+        {
+            _attackDetailsDal.Add(attackDetails);
+            return new SuccessResult("Attack logged to the system");
+        }
+
+        public IResult Delete(AttackDetails attackDetails)
+        {
+            _attackDetailsDal.Delete(attackDetails);
+            return new SuccessResult("Attack deleted from the system");
         }
 
         public IDataResult<List<AttackDetails>> GetAll()
@@ -26,7 +36,13 @@ namespace Business.Concrete
 
         public IDataResult<AttackDetails> GetById(int attackId)
         {
-            return new SuccessDataResult<AttackDetails>(_attackDetailsDal.Get(a => a.AttackId == attackId));
+            return new SuccessDataResult<AttackDetails>(_attackDetailsDal.Get(a => a.Id == attackId));
+        }
+
+        public IResult Update(AttackDetails attackDetails)
+        {
+            _attackDetailsDal.Update(attackDetails);
+            return new SuccessResult("Attack updated");
         }
     }
 }
