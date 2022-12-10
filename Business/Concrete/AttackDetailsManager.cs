@@ -10,7 +10,6 @@ namespace Business.Concrete
 {
     public class AttackDetailsManager : IAttackDetailsService
     {
-        private readonly IAttackDetailsDal _attackDetailsDal;
 
         public AttackDetailsManager(IAttackDetailsDal attackDetailsDal)
         {
