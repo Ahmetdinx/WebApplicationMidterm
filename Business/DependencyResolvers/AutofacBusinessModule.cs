@@ -24,7 +24,9 @@ namespace Business.DependencyResolvers
 
             builder.RegisterType<AttackDetailsManager>().As<IAttackDetailsService>().SingleInstance();
             builder.RegisterType<EfAttackDetailsDal>().As<IAttackDetailsDal>().SingleInstance();
+            builder.RegisterType<EfUserOperationClaimDal>().As<IUserOperationClaimDal>().SingleInstance();
 
+            builder.RegisterType<RunAttackManager>().As<IRunAttackService>().SingleInstance();
             builder.RegisterType<AuthManager>().As<IAuthService>().SingleInstance();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>().SingleInstance();
 

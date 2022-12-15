@@ -8,6 +8,7 @@ namespace Business.Constants
 {
     public static class Messages
     {
+        public static string AttackCannotLogged = "Attack loglanamadı";
 
         public static string UserAdded = "Kullanıcı eklendi";
 
