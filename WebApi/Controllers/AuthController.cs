@@ -11,7 +11,7 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class AuthController : BaseController
     {
 
         private readonly IAuthService _authService;
@@ -69,7 +69,7 @@ namespace WebApi.Controllers
 
             var result = _authService.Update(userForUpdateDto, userForUpdateDto.Password);
 
-            return BadRequest(result.Message);
+            return Ok(result.Message);
         }
     }
 }

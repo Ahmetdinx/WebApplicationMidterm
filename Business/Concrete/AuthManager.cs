@@ -90,8 +90,6 @@ namespace Business.Concrete
 
 
             user.Data.Email = userForUpdateDto.Email;
-            user.Data.FirstName = userForUpdateDto.FirstName;
-            user.Data.LastName = userForUpdateDto.LastName;
             user.Data.PasswordHash = passwordHash;
             user.Data.PasswordSalt = passwordSalt;
             user.Data.Status = true;

@@ -9,7 +9,7 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AttackDetailsController : ControllerBase
+    public class AttackDetailsController : BaseController
     {
         private IAttackDetailsService _attackDetailsService;
 
@@ -17,6 +17,18 @@ namespace WebApi.Controllers
         {
             _attackDetailsService = attackDetailsService;
         }
+
+        [HttpGet("getAll")]
+        public ActionResult GetAll()
+        {
+            var result = _attackDetailsService.GetAll();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result.Message);
+        }
+
 
         [HttpGet("getById")]
         public ActionResult GetById(int id)
@@ -28,18 +40,7 @@ namespace WebApi.Controllers
             }
             return BadRequest(result.Message);
         }
-
-        [HttpGet("getById")]
-        public ActionResult GetAll()
-        {
-            var result = _attackDetailsService.GetAll();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result.Message);
-
-        }
+        
 
         [HttpPost("add")]
         public IActionResult Add(AttackDetails attackDetails)

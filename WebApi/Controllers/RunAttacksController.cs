@@ -7,7 +7,7 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RunAttacksController : ControllerBase
+    public class RunAttacksController : BaseController
     {
         private readonly IRunAttackService _runAttackService;
 
@@ -17,11 +17,25 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("runNmap")]
-        public ActionResult RunNmap()
+        public ActionResult RunNmap(int userId, string ipAddress)
         {
             try
             {
-                //_runAttackService.RunNmap();
+                _runAttackService.RunNmap(userId, ipAddress);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
+        }
+
+        [HttpGet("runTokenImpersonation")]
+        public ActionResult RunTokenImpersonation(int userId)
+        {
+            try
+            {
+                _runAttackService.RunTokenImpersonation(userId);
                 return Ok();
             }
             catch (Exception e)
