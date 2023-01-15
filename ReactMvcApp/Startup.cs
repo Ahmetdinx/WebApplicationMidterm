@@ -74,9 +74,7 @@ namespace ReactMvcApp
 
             app.UseCors(builder => builder.WithOrigins(new[]
                 {
-                    "http://localhost:23686", "http://localhost:7235", "http://localhost:3000", "http://localhost:5000",
-                    "http://localhost:5001",
-                    "http://localhost:44417"
+                    "http://localhost:7235", "http://localhost:3000", "http://localhost:44417"
                 })
                 .AllowAnyHeader());
 

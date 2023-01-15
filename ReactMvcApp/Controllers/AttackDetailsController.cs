@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Business.Abstract;
 
-namespace WebApi.Controllers
+namespace ReactMvcApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

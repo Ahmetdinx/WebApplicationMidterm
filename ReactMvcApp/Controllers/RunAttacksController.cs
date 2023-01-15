@@ -3,7 +3,7 @@ using Business.Abstract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApi.Controllers
+namespace ReactMvcApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

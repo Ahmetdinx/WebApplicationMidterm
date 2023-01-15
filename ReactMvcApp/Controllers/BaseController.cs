@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace WebApi.Controllers
+namespace ReactMvcApp.Controllers
 {
     public class BaseController : Controller
     {
