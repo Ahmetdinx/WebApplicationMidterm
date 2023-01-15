@@ -11,10 +11,19 @@ namespace Business.Concrete
     public class AttackDetailsManager : IAttackDetailsService
     {
         private readonly IAttackDetailsDal _attackDetailsDal;
+        private readonly IUserService _userService;
 
-        public AttackDetailsManager(IAttackDetailsDal attackDetailsDal)
+        public AttackDetailsManager(IAttackDetailsDal attackDetailsDal, IUserService userService)
         {
             _attackDetailsDal = attackDetailsDal;
+            _userService = userService;
+        }
+
+        public IDataResult<List<AttackDetails>> GetAllByEmail(string email)
+        {
+            var attackedUser = _userService.GetByMail(email);
+            return new SuccessDataResult<List<AttackDetails>>(
+                _attackDetailsDal.GetAll(a => a.Id == attackedUser.Data.Id));
         }
 
         public IResult Add(AttackDetails attackDetails)

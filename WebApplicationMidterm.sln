@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33027.164
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{6B8B9FF8-14DB-41ED-B32A-9BA829AFB85E}"
 EndProject
@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{39D23501-70E4-48A1-BE64-9BBF665CC7C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{E84E7E9F-E078-41A3-A844-4AFB69D242DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{E84E7E9F-E078-41A3-A844-4AFB69D242DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactMvcApp", "ReactMvcApp\ReactMvcApp.csproj", "{969BA9E4-10E9-4507-AF47-7101123B2C73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E84E7E9F-E078-41A3-A844-4AFB69D242DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E84E7E9F-E078-41A3-A844-4AFB69D242DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E84E7E9F-E078-41A3-A844-4AFB69D242DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969BA9E4-10E9-4507-AF47-7101123B2C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969BA9E4-10E9-4507-AF47-7101123B2C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969BA9E4-10E9-4507-AF47-7101123B2C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969BA9E4-10E9-4507-AF47-7101123B2C73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
