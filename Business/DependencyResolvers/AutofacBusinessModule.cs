@@ -23,6 +23,7 @@ namespace Business.DependencyResolvers
             builder.RegisterType<EfUserDal>().As<IUserDal>().SingleInstance();
 
             builder.RegisterType<AttackDetailsManager>().As<IAttackDetailsService>().SingleInstance();
+
             builder.RegisterType<EfAttackDetailsDal>().As<IAttackDetailsDal>().SingleInstance();
             builder.RegisterType<EfUserOperationClaimDal>().As<IUserOperationClaimDal>().SingleInstance();
 

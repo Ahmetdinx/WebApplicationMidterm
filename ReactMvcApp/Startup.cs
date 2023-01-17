@@ -4,7 +4,6 @@ using Core.Utilities.IoC;
 using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -13,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using ReactMvcApp.Controllers;
 
 namespace ReactMvcApp
 {
@@ -28,8 +28,12 @@ namespace ReactMvcApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin()); });
             services.AddControllers();
-            services.AddCors();
+            services.AddMvc();
+            services.AddAuthorization();
+            services.AddAuthentication();
+            services.AddRouting();
             services.TryAddSingleton<IActionContextAccessor, ActionContextAccessor>();
 
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
@@ -72,11 +76,7 @@ namespace ReactMvcApp
 
             app.UseRouting();
 
-            app.UseCors(builder => builder.WithOrigins(new[]
-                {
-                    "http://localhost:7235", "http://localhost:3000", "http://localhost:44417"
-                })
-                .AllowAnyHeader());
+            app.UseCors(cors => cors.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseHttpsRedirection();
 

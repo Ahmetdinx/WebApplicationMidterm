@@ -56,6 +56,7 @@
   "overrides": {
     "autoprefixer": "10.4.5"
   },
+  "proxy": "https://localhost:44376",
   "resolutions": {
     "css-what": "^5.0.1",
     "nth-check": "^3.0.1"

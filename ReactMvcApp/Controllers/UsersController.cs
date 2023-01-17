@@ -1,6 +1,4 @@
 ﻿using Business.Abstract;
-using Core.Entities.Concrete;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ReactMvcApp.Controllers
@@ -19,7 +17,7 @@ namespace ReactMvcApp.Controllers
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-
+            var ipAddress = GetIpAddress();
             var result = _userService.GetAllUsers();
             if (result.Success)
             {

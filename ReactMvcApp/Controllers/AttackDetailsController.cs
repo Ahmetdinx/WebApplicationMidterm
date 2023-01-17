@@ -29,11 +29,33 @@ namespace ReactMvcApp.Controllers
             return BadRequest(result.Message);
         }
 
+        [HttpGet("getAllByAttackType")]
+        public ActionResult GetAllByAttackType(string email, string attackType)
+        {
+            var result = _attackDetailsService.GetAllByEmailAndAttackType(email,attackType);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result.Message);
+        }
+
 
         [HttpGet("getById")]
         public ActionResult GetById(int id)
         {
             var result = _attackDetailsService.GetById(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result.Message);
+        }
+        
+        [HttpGet("getByEmail")]
+        public ActionResult GetByEmail(string email)
+        {
+            var result = _attackDetailsService.GetAllByEmail(email);
             if (result.Success)
             {
                 return Ok(result);

@@ -16,17 +16,9 @@ namespace ReactMvcApp
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
-
-            var builder = WebApplication.CreateBuilder(args);
-
+            var builder = CreateHostBuilder(args);
             var app = builder.Build();
-
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller}/{action=Index}/{id?}");
-
-            app.MapFallbackToFile("index.html");
+            app.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

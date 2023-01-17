@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Net;
 using Business.Abstract;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ReactMvcApp.Controllers
@@ -19,29 +19,22 @@ namespace ReactMvcApp.Controllers
         [HttpGet("runNmap")]
         public ActionResult RunNmap(int userId, string ipAddress)
         {
-            try
-            {
-                _runAttackService.RunNmap(userId, ipAddress);
-                return Ok();
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+            var result = _runAttackService.RunNmap(userId, ipAddress);
+            if(result.Success)    
+                return Ok(result.Message);
+                
+            return BadRequest(result.Message);
+            
         }
 
         [HttpGet("runTokenImpersonation")]
         public ActionResult RunTokenImpersonation(int userId)
         {
-            try
-            {
-                _runAttackService.RunTokenImpersonation(userId);
-                return Ok();
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+            var result = _runAttackService.RunTokenImpersonation(userId);
+            if (result.Success)
+                return Ok(result.Message);
+
+            return BadRequest(result.Message);
         }
     }
 }

@@ -19,11 +19,18 @@ namespace Business.Concrete
             _userService = userService;
         }
 
+        public IDataResult<List<AttackDetails>> GetAllByEmailAndAttackType(string email,string attackType)
+        {
+            var user = _userService.GetByMail(email).Data;
+            return new SuccessDataResult<List<AttackDetails>>(_attackDetailsDal.GetAll(a => a.UserId == user.Id &&
+                a.AttackType == attackType));
+        }
+
         public IDataResult<List<AttackDetails>> GetAllByEmail(string email)
         {
             var attackedUser = _userService.GetByMail(email);
             return new SuccessDataResult<List<AttackDetails>>(
-                _attackDetailsDal.GetAll(a => a.Id == attackedUser.Data.Id));
+                _attackDetailsDal.GetAll(a => a.UserId == attackedUser.Data.Id));
         }
 
         public IResult Add(AttackDetails attackDetails)
