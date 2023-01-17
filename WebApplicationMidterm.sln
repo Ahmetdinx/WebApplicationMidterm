@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactMvcApp", "ReactMvcApp\ReactMvcApp.csproj", "{969BA9E4-10E9-4507-AF47-7101123B2C73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCReactApp", "MVCReactApp\MVCReactApp.csproj", "{43A96823-846D-4010-8903-CCC25AEEBAFC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{969BA9E4-10E9-4507-AF47-7101123B2C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{969BA9E4-10E9-4507-AF47-7101123B2C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{969BA9E4-10E9-4507-AF47-7101123B2C73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43A96823-846D-4010-8903-CCC25AEEBAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43A96823-846D-4010-8903-CCC25AEEBAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43A96823-846D-4010-8903-CCC25AEEBAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43A96823-846D-4010-8903-CCC25AEEBAFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
